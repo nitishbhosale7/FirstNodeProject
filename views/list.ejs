@@ -1,0 +1,30 @@
+<%- include('header'); -%>
+<div class="box" id="heading">
+          <h1 class="Title"><%= NameDay %></h1>
+        </div>
+          <div class="box">
+            <% for(var i =0; i < data.length;i++) { %>
+              <div class="item">
+                <%  if(data[i] != '' && data[i].trim() != ' '){ %>
+                        <input type="checkbox"/>
+                       <p><%= data[i] %></p>
+                <%  } %>
+              </div>
+            <%  } %>
+
+            <form action="/" method="post">
+                <input type="text" name="mem" autocomplete="off" placeholder="New Item"/>
+        
+                <button type="submit" name="list" value=<%= NameDay %>>+</button>
+        
+             </form>
+
+          </div>
+
+<%- include('footer'); -%>
+            
+            
+       
+
+    
+   
